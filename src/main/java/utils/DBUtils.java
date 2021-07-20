@@ -12,7 +12,7 @@ public class DBUtils {
     }
 
     public static ResultSet executeQuery(String query, Connection conn) throws SQLException {
-        Statement st = conn.createStatement();
+        Statement st =(Statement)conn.createStatement();
         ResultSet resultSet = st.executeQuery(query);
         return resultSet;
     }
