@@ -17,7 +17,9 @@ import java.util.Map;
 public class eScorePremiumId {
     public static void eScorePremiumIdGenerator() throws SQLException, IOException {
         String filePath = "/Users/piyushbansal/Downloads/ActiveLeads.csv";
+
         int batchSize = 2000;
+        int test=0;
         try {
             BufferedReader br = FileUtils.readFile(filePath);
             String line;
