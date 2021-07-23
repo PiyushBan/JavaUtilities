@@ -5,7 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FileUtils {
-
+//    static BufferedWriter bw;
+    static BufferedReader br;
     public static void writeFile(String filePath, String content) throws IOException {
         File file=new File(filePath);
         file.getParentFile().mkdirs();
@@ -13,6 +14,15 @@ public class FileUtils {
         BufferedWriter bw = new BufferedWriter(new FileWriter(file, true));
         bw.write(content);
         bw.close();
+    }
+    public static void closeFile() throws IOException {
+        System.out.println("File Closed Successfully");
+    }
+    public static BufferedReader readFile(String filePath) throws IOException{
+        File file=new File(filePath);
+        br=new BufferedReader(new FileReader(file));
+
+        return br;
     }
     public static Map<Integer,Integer> calendar(){
         Map<Integer, Integer> days = new HashMap<>();

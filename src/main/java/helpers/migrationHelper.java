@@ -17,7 +17,7 @@ public class migrationHelper {
         Map<Integer, Integer> days = FileUtils.calendar();
 
         String dbUrl = "jdbc:mysql://35.154.206.60:3306/byjus_sf_archival?user=root&password=Byjus@2020";
-        String destFile = "/Users/piyushbansal/Documents/Archival/Migration/7461_Activity/score#.csv";
+        String destFile="/Users/piyushbansal/Documents/Archival/Migration/7461_Activity/score#.csv";
         String sql = "select PremiumID, AppID, EngagementDate, EngagementScore, PrimaryOrSecondary, LastModifiedOn " +
                 "from Engagement_Score where EngagementDate = '#'";
         int fileCounter = 0;

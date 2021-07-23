@@ -12,8 +12,9 @@ public class Helper {
         DbName[4] = "ls_31593";
         DbName[5] = "ls_7461";
         DbName[6]="Migration for Engagement Score Direct";
+        DbName[7]="EngagementScore 90 Days wrt to Premium ID";
         Scanner scanner = new Scanner(System.in);
-        for (int i = 1; i < 7; i++) {
+        for (int i = 1; i < 8; i++) {
             System.out.println(i + ": " + DbName[i]);
         }
         int n = scanner.nextInt();
@@ -35,6 +36,9 @@ public class Helper {
                 break;
             case 6:
                 helpers.migrationHelper.eScoreMigrator();
+                break;
+            case 7:
+                eScorePremiumId.eScorePremiumIdGenerator();
                 break;
 
             default:

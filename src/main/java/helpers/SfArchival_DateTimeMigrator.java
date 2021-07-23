@@ -81,7 +81,7 @@ public class SfArchival_DateTimeMigrator {
                             output.append(rs.getString(i + 1));
                         }
                     } else {
-                        output.append("|");
+                        output.append(",");
 
                         if (nullFlag) {
                             Integer typeOfColumn = typeOfDBColumn.get(i + 1);
@@ -93,7 +93,7 @@ public class SfArchival_DateTimeMigrator {
                             output.append(rs.getString(i + 1));
                     }
                 }
-                output.append("\n");
+                output.append('\n');
                 counter++;
                 globalCounter++;
 
@@ -179,7 +179,7 @@ public class SfArchival_DateTimeMigrator {
                     }
 
                 }
-                output.append("\n");
+                output.append('\n');
                 counter++;
                 globalCounter++;
             }
